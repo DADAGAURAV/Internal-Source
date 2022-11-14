@@ -7,5 +7,5 @@ namespace Offsets
 		ProcessEvent = 0x32F68B0,
 		StaticFindObject = 0x3337740,
 		TriggerVEH = 0x1D9DC50,
-		GetActorBounds = 0x4760F50;
+		GetActorBounds = 0x50520a0;
 }
