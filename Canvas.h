@@ -588,7 +588,7 @@ struct APlayerController : UObject
 	bool ProjectWorldLocationToScreen(struct FVector WorldLocation, struct FVector2D& ScreenLocation, bool bPlayerViewportRelative)
 	{  
 		if (!ProjectWorldToScreen)
-			ProjectWorldToScreen = (uintptr_t)GetModuleHandleA(0) + 0x4fd7c60;
+			ProjectWorldToScreen = (uintptr_t)GetModuleHandleA(0) + 0x4E0E140;
 		auto WorldToScreen = reinterpret_cast<bool(__fastcall*)(uintptr_t pPlayerController, FVector vWorldPos, FVector2D * vScreenPosOut, char)>(ProjectWorldToScreen);
 
 		WorldToScreen((uintptr_t)this, WorldLocation, &ScreenLocation, (char)0);
