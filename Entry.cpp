@@ -99,7 +99,7 @@ void DrawBox(UCanvas* can, FVector2D& topleft, FVector2D& downright, FLinearColo
 uintptr_t OffsetGetActorBounds;
 void GetActorBounds(AShooterCharacter* Actor, bool bOnlyCollidingComponents, FVector* Origin, FVector* BoxExtent, bool bIncludeFromChildActors)
 {
-	reinterpret_cast<void(*)(AShooterCharacter*, bool, FVector * pos, FVector * screen, bool)> ((uintptr_t)GetModuleHandleA(0) + 0x498aaa0)(Actor, 0, Origin, BoxExtent, 0);
+	reinterpret_cast<void(*)(AShooterCharacter*, bool, FVector * pos, FVector * screen, bool)> ((uintptr_t)GetModuleHandleA(0) + Offsets::GetActorBounds)(Actor, 0, Origin, BoxExtent, 0);
 }
 static FVector2D scr[8];
 
